@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(224, 211, 211);
+      }
+      /* {
+        border: 1px solid black;
+      } */
+      .flex {
+        display: flex;
+      }
+      .white {
+        background-color: white;
+        box-shadow: 1px 2px rgba(166, 172, 177, 0.943);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .suoyin {
+        padding: 10px 20px;
+        border-bottom: 1px solid gray;
+        font-size: 14px;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2" class="white">
+      <!--头像-->
+      <div
+        style="
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          border-bottom: 3px solid #cec2c2;
+        "
+        class="flex"
+      >
+        <img
+          src="https://weavatar.com/avatar/a3c4bb542782def58aad9def22904d99?s=96&d=mp&r=g"
+          height="50px"
+          width="50px"
+          name="touxiang"
+          alt=""
+        />
+        <a href="index.html" style="margin-left: 10px" name="touxiang"
+          >居居bondking</a
+        >
+      </div>
+      <!--索引栏-->
+      <div class="flex1">
+        <!--索引条-->
+        <div class="suoyin">1</div>
+        <div class="suoyin">2</div>
+        <div class="suoyin">3</div>
+        <div class="suoyin">4</div>
+      </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏-->
+      <div style="height: 60px; z-index: 1" class="white flex">
+        <div style="margin-left: 25px; margin-top: 18px; font-size: 15px">
+          搜索
+        </div>
+        <input
+          type="text"
+          class="mgr8"
+          style="height: 15px; margin-top: 19px; margin-left: 5px"
+        />
+      </div>
+      <!--内容栏-->
+      <div style="overflow: auto" class="flex1 flex">
+        <!--左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--数据区-->
+          <div class="flex">
+            <!--数据块1-->
+            <div style="height: 70px" class="flex1 white mgr8"></div>
+            <div style="height: 70px" class="flex1 white mgr8"></div>
+            <div style="height: 70px" class="flex1 white mgr8"></div>
+            <div style="height: 70px" class="flex1 white"></div>
+          </div>
+          <!--列表区-->
+          <div class="column flex">
+            <!--列表项-->
+            <div style="font-size: 15px" class="white mgt8">
+              未被表达的情绪永远不会消亡。它们只是被活埋，并将在未来以更丑陋的方式爆发出来。
+            </div>
+            <div
+              style="height: 160px; font-size: 15px"
+              class="white mgt8"
+            ></div>
+            <div
+              style="height: 160px; font-size: 15px"
+              class="white mgt8"
+            ></div>
+            <div
+              style="height: 160px; font-size: 15px"
+              class="white mgt8"
+            ></div>
+            <div
+              style="height: 160px; font-size: 15px"
+              class="white mgt8"
+            ></div>
+            <div
+              style="height: 160px; font-size: 15px"
+              class="white mgt8"
+            ></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex column mg8 mgr8">
+          <!--提示区-->
+          <div style="height: 150px" class="white"></div>
+          <!--消息区-->
+          <div style="height: 300px" class="white mgt8"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
